@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <style>
+        /*头部公用开始*/
+        /*header*/
+        header {
+            width: 100%;
+            height: 30px;
+            background: #f5f5f5;
+            line-height: 30px;
+            font-size: 12px;
+        }
+
+        header > .container > ul:first-of-type {
+            float: left;
+
+        }
+
+        header > .container > ul:nth-of-type(2),
+        header > .container > ul:last-of-type {
+            float: right;
+        }
+
+        header > .container > ul > li {
+            float: left;
+            padding: 0px 3px;
+        }
+
+        /*header*/
+        /*navigation*/
+        .navigation {
+            padding-top: 10px;
+            height: 86px;
+        }
+
+        .navigation > .container > a {
+            float: left;
+            display: block;
+            width: 321px;
+            height: 43px;
+            text-indent: -999em;
+            background: url("../img/logo.png") no-repeat;
+            margin: 22px 30px 22px 0px;
+        }
+
+        .navigation > .container > nav {
+            height: 86px;
+            float: left;
+            line-height: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .navigation > .container > nav > ul > li {
+            float: left;
+            position: relative;
+            left: 0;
+            top: 0;
+            padding: 22px 25px;
+        }
+
+        .navigation > .container > nav > ul > li > a, .navigation > .container > nav > ul > li > ul > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #333;
+            transition: all .3s;
+        }
+
+        .navigation > .container > nav > ul > li:hover {
+            text-decoration: none;
+            color: #fff;
+            background: #f15a50;
+            border-radius: 5px 5px 0px 0px;
+            box-shadow: 0px 0px 5px 0px rgba(241, 90, 80, .3);
+        }
+
+        .navigation > .container > nav > ul > li:first-child:hover, .navigation > .container > nav > ul > li:last-child:hover {
+            border-radius: 5px;
+        }
+
+        .navigation > .container > nav > ul > li:hover > a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navigation > .container > nav > ul > li > a > small {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .navigation > .container > nav > ul > li:hover > a > small {
+            color: #fff;
+        }
+
+        .navigation > .container > nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            padding-top: 7px;
+            opacity: 0;
+            transition: all .3s;
+            text-align: center;
+            width: 100%;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .navigation > .container > nav > ul > li > ul:before {
+            content: '';
+            position: absolute;
+            border-width: 10px;
+            border-color: #f15a50 transparent transparent transparent;
+            border-style: solid dashed dashed dashed;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul {
+            opacity: 1;
+            border: 1px solid rgba(241, 90, 80, .3);
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li {
+            padding: 10px;
+            background: #fff;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li:hover {
+            background: #f15a50;
+            border-radius: 5px;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li:hover > a {
+            color: #fff;
+
+        }
+        /*头部公用结束*/
+    </style>
+
+</head>
+<body>
+<!--nav-client-header-->
+<header>
+    <div class="container">
+        <ul>
+            <li><a href="javascript:void(0)"><i></i>天安金交所首页</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascript:void(0)">登录</a></li>
+            <li><a href="javascript:void(0)">|</a></li>
+            <li><a href="javascript:void(0)">注册</a></li>
+        </ul>
+        <ul>
+            <li>欢迎您，<a href="javascript:void(0)">登录</a></li>
+            <li><a href="javascript:void(0)">|</a></li>
+            <li><a href="javascript:void(0)">退出</a></li>
+        </ul>
+    </div>
+</header>
+<div class="navigation">
+    <div class="container">
+        <a href="javascript:void(0)">天安金交所</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="javascript:void(0)">首页<br>
+                        <small>Home</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">产品专区<br>
+                        <small>Product</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">业务专区<br>
+                        <small>Business</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">公告专区<br>
+                        <small>Notice</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">新闻中心<br>
+                        <small>News</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">会员服务<br>
+                        <small>Member</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">关于天交所<br>
+                        <small>About</small>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+</body>
+</html>

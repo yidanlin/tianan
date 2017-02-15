@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开户岗入会</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <style>
+        /*头部公用开始*/
+        /*header*/
+        header {
+            width: 100%;
+            height: 30px;
+            background: #f5f5f5;
+            line-height: 30px;
+            font-size: 12px;
+        }
+
+        header > .container > ul:first-of-type {
+            float: left;
+
+        }
+
+        header > .container > ul:nth-of-type(2),
+        header > .container > ul:last-of-type {
+            float: right;
+        }
+
+        header > .container > ul > li {
+            float: left;
+            padding: 0px 3px;
+        }
+
+        /*header*/
+        /*navigation*/
+        .navigation {
+            padding-top: 10px;
+            height: 86px;
+        }
+
+        .navigation > .container > a {
+            float: left;
+            display: block;
+            width: 321px;
+            height: 43px;
+            text-indent: -999em;
+            background: url("../img/logo.png") no-repeat;
+            margin: 22px 30px 22px 0px;
+        }
+
+        .navigation > .container > nav {
+            height: 86px;
+            float: left;
+            line-height: 20px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .navigation > .container > nav > ul > li {
+            float: left;
+            position: relative;
+            left: 0;
+            top: 0;
+            padding: 22px 25px;
+        }
+
+        .navigation > .container > nav > ul > li > a, .navigation > .container > nav > ul > li > ul > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #333;
+            transition: all .3s;
+        }
+
+        .navigation > .container > nav > ul > li:hover {
+            text-decoration: none;
+            color: #fff;
+            background: #f15a50;
+            border-radius: 5px 5px 0px 0px;
+            box-shadow: 0px 0px 5px 0px rgba(241, 90, 80, .3);
+        }
+
+        .navigation > .container > nav > ul > li:first-child:hover, .navigation > .container > nav > ul > li:last-child:hover {
+            border-radius: 5px;
+        }
+
+        .navigation > .container > nav > ul > li:hover > a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navigation > .container > nav > ul > li > a > small {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .navigation > .container > nav > ul > li:hover > a > small {
+            color: #fff;
+        }
+
+        .navigation > .container > nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            padding-top: 7px;
+            opacity: 0;
+            transition: all .3s;
+            text-align: center;
+            width: 100%;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .navigation > .container > nav > ul > li > ul:before {
+            content: '';
+            position: absolute;
+            border-width: 10px;
+            border-color: #f15a50 transparent transparent transparent;
+            border-style: solid dashed dashed dashed;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul {
+            opacity: 1;
+            border: 1px solid rgba(241, 90, 80, .3);
+
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li {
+            padding: 10px;
+            background: #fff;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li > a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li:not(:last-child) {
+            border-bottom: 1px solid #eee;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li:hover {
+            background: #f15a50;
+            border-radius: 5px;
+        }
+
+        .navigation > .container > nav > ul > li:hover > ul > li:hover > a {
+            color: #fff;
+
+        }
+
+        /*头部公用结束*/
+        .container1000 {
+            border: 1px solid #cecece;
+            padding: 40px;
+            margin-top:100px
+        }
+
+        /*申请步骤 标题*/
+        .container1000 > ul {
+            overflow: hidden;
+            padding: 8px 8px 24px 8px;
+
+        }
+
+        .container1000 > ul > li {
+            float: left;
+            padding: 8px 16px;
+            background: #eee;
+            border-radius: 5px;
+            margin: 0px 30px;
+            transition: all 1s;
+            color: #999;
+            border: 1px solid #cecece;
+        }
+
+        /*标题active状态*/
+        /*标题passed状态*/
+        .container1000 > ul > li.passed {
+            background: #f15a50;
+            color: #fff;
+        }
+
+        /*app-step1 begin*/
+        .container1000 > .app-step1 > ul:first-of-type > li {
+            margin-top: 10px;
+        }
+
+        .container1000 > .app-step1 > ul > li > input[type=radio] {
+            /*visibility: hidden;*/
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .container1000 > .app-step1 > ul > li > input[type=radio] + label {
+
+        }
+
+        .container1000 > .app-step1 > ul:nth-of-type(2) {
+            padding-left: 20px;
+            overflow: hidden;
+        }
+
+        .container1000 > div > ul:nth-of-type(2) li {
+            float: left;
+            margin-right: 20px;
+            color: #666;
+        }
+
+        .container1000 > .app-step1 > ul:nth-of-type(2) li input[type=checkbox] {
+            margin-right: 3px;
+        }
+
+        .container1000 > .app-step1 > ul:nth-of-type(2) li input[type=checkbox] + label {
+            color: #666;
+        }
+
+        /*底部button居中*/
+        .container1000 > div > p:last-of-type, .container1000 .app-step3 > form > p {
+            text-align: center;
+        }
+
+        .container1000 > div > p:last-of-type > input, .container1000 .app-step3 > form > p:last-of-type > input {
+            width: 90px;
+            height: 40px;
+            border-radius: 5px;
+            background: #f15a50;
+            color: #fff;
+            margin: 30px 10px 20px 10px;
+        }
+
+        .container1000 > div > p > input[type="button"]:active {
+            color: #f15a50;
+            background: #fff;
+            box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, .3);
+        }
+
+        /*底部button居中 结束*/
+        /*app-step1 over*/
+        /*app-step2 begin*/
+        .container1000 > .app-step2 h4 {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .container1000 > .app-step2 > p > input[type=checkbox] {
+            margin-right: 3px;
+        }
+
+        .container1000 > .app-step2 > input {
+
+        }
+
+        /*app-step2 over*/
+        /*app-step3 begin*/
+        .container1000 > .app-step3 > form {
+            background: #f5f5f5;
+            padding: 20px;
+            box-shadow: 1px 1px 10px 0px rgba(0, 0, 0, .3);
+        }
+
+        .container1000 > .app-step3 > form > div {
+            line-height: 30px;
+            margin-bottom: 10px;
+        }
+
+        .container1000 > .app-step3 > form > div > span {
+            float: left;
+            width: 140px;
+            height: 30px;
+            text-align: right;
+            background: #cecece;
+        }
+
+        .container1000 > .app-step3 > form > div > span + input, .container1000 > .app-step3 > form > div > span + select {
+            border: 1px solid #999;
+            height: 30px;
+            width: 400px;
+        }
+
+        /*app-step3 over*/
+        /*app-step4 begin*/
+
+        /*app-step4 over*/
+
+    </style>
+</head>
+<body>
+<!--引用commen.html-->
+<header>
+    <div class="container">
+        <ul>
+            <li><a href="javascript:void(0)"><i></i>天安金交所首页</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascript:void(0)">登录</a></li>
+            <li><a href="javascript:void(0)">|</a></li>
+            <li><a href="javascript:void(0)">注册</a></li>
+        </ul>
+        <ul>
+            <li>欢迎您，<a href="javascript:void(0)">登录</a></li>
+            <li><a href="javascript:void(0)">|</a></li>
+            <li><a href="javascript:void(0)">退出</a></li>
+        </ul>
+    </div>
+</header>
+<div class="navigation">
+    <div class="container">
+        <a href="javascript:void(0)">天安金交所</a>
+        <nav>
+            <ul>
+                <li>
+                    <a href="javascript:void(0)">首页<br>
+                        <small>Home</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">产品专区<br>
+                        <small>Product</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                        <li><a href="javascript:void(0)">产品list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">业务专区<br>
+                        <small>Business</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                        <li><a href="javascript:void(0)">业务list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">公告专区<br>
+                        <small>Notice</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                        <li><a href="javascript:void(0)">公告list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">新闻中心<br>
+                        <small>News</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                        <li><a href="javascript:void(0)">新闻list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">会员服务<br>
+                        <small>Member</small>
+                    </a>
+                    <ul>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                        <li><a href="javascript:void(0)">会员list</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">关于天交所<br>
+                        <small>About</small>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="container1000">
+    <!--申请步骤 标题-->
+    <ul>
+        <li><i class=""></i>申请会员类别</li>
+        <li class="active"><i class=""></i>申请人承诺与声明确认</li>
+        <li class="passed"><i class=""></i>申请人基本信息</li>
+        <li><i class=""></i>附件上传</li>
+    </ul>
+    <!--请选择申请会员类别-->
+    <div class="app-step1">
+        <p>请选择申请会员类别： <br>
+            <small>（申请人选填字母代码，综合类会员还需于□内勾选申请开展的业务类型）</small>
+        </p>
+        <ul>
+            <li><input type="radio" name="radioInput" id="aa"><label for="aa">交易类会员。可在本交易中心从事各类金融资产转让、受让等交易业务。</label>
+            </li>
+            <li><input type="radio" name="radioInput" id="ss"><label for="ss">经纪类会员。可在本交易中心从事各类金融资产受托经纪业务。</label></li>
+            <li><input type="radio" name="radioInput" id="dd"><label for="dd">承销类会员。可在本交易中心从事直接融资类金融资产承销业务。</label></li>
+            <li><input type="radio" name="radioInput" id="ff"><label for="ff">服务类会员。可在本交易中心为各类金融资产交易提供审计、资产评估、担保、保险、法律、拍卖、财务顾问等服务业务。</label>
+            </li>
+            <li><input type="radio" name="radioInput" id="gg"><label for="gg">综合类会员。展业类型涵盖上述四类会员中的任意两类及以上。</label></li>
+        </ul>
+        <ul>
+            <li><input type="checkbox" id="hh"><label for="hh">金融资产转让、受让</label></li>
+            <li><input type="checkbox" id="jj"><label for="jj">金融资产承销</label></li>
+            <li><input type="checkbox" id="kk"><label for="kk">受托经纪</label></li>
+            <li><input type="checkbox" id="ll"><label for="ll">专业服务</label></li>
+        </ul>
+        <p><input type="button" value="下一步"/></p>
+    </div>
+    <!--协议内容-->
+    <div class="app-step2">
+        <h4>协议内容</h4>
+        <p>经认真阅读《天安（贵州省）互联网金融资产交易中心股份有限公司会员管理办法（暂行）》及相关规定，我单位现自愿申请成为天安金融资产交易中心会员，并郑重承诺：</p>
+        <p>1.我方提交的入会材料真实、完整、合法、有效，不存在任何虚假记载、误导性陈述和重大遗漏；</p>
+        <p>2.我方将自觉履行会员义务，配合支持贵交易中心相关工作，维护贵交易中心声誉，接受贵交易中心的监督与管理；</p>
+        <p><input type="checkbox" id="zz"><label for="zz">我已阅读并同意遵守上述规定</label></p>
+        <p><input type="button" value="上一步"/><input type="button" value="下一步"/></p>
+    </div>
+    <!--证件-->
+    <div class="app-step3">
+        <p>注：* 号标识的字段项为必填项</p>
+        <form action="#">
+            <div><span>*机构证件类型：</span><select name="" id="">
+                <option value="1">组织机构代码证</option>
+                <option value="2">统一社会信用代码证</option>
+            </select></div>
+            <div><span>*机构证件代码：</span><input type="text"></div>
+            <div><span>*机构全称(中文)：</span><input type="text"></div>
+            <div><span>*公司地址：</span><input type="text"></div>
+            <div><span>*邮政编码：</span><input type="text"></div>
+            <div><span>*法定代表姓名：</span><input type="text"></div>
+            <div><span>*经营范围：</span><input type="text"></div>
+            <div><span>*联系人姓名：</span><input type="text"></div>
+            <div><span>*联系电话：</span><input type="text"></div>
+            <div><span>*证件类型：</span><input type="text"></div>
+            <div><span>*证件号码：</span><input type="text"></div>
+            <div><span>*E-mail地址：</span><input type="text"></div>
+            <div><span>网站地址：</span><input type="text"></div>
+            <p><input type="button" value="上一步"/><input type="button" value="下一步"/></p>
+        </form>
+    </div>
+    <div class="app-step4">
+        <p>申请人需向天安金融资产交易中心提交相关经营信息材料扫描件，请进行附件上传</p>
+        <p>1.《企业法人营业执照》或其他合法主体资格证明*</p>
+        <p>2.《组织机构代码证》和《税务登记证》*</p>
+        <p>3.公司章程或类似组织性文件*</p>
+        <p>4.法定代表证明书及代表身份证明*</p>
+        <p>5.法人代表授权委托书及授权代理人（经办人）身份证明*</p>
+        <p>6.相关行业资质或业务许可证书（如有）</p>
+        <p>7.最近两年企业审计报告和最新月份企业财务报表*</p>
+        <p>8.交易中心规定的其他相关材料</p>
+        <p>*以上所有材料须加盖申请人单位公章，将扫描件上传</p>
+        <section>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+            <div><input type="file"/></div>
+        </section>
+        <p><input type="button" value="上一步"/><input type="button" value="保存"/><input type="submit" value="提交开户资料"/></p>
+
+    </div>
+</div>
+</body>
+</html>

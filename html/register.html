@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <style>
+        html {
+
+        }
+
+        body {
+            background: url("../img/regBg.jpg") no-repeat center center;
+        }
+
+        form {
+            width: 610px;
+            margin: 100px auto 0px auto;
+            /*position: absolute;*/
+            /*top:80px;*/
+            /*right:50px;*/
+            /*animation: moveX 1s;*/
+            padding: 30px;
+            box-shadow: 0px 0px 100px 0px #37f1e9, 2px 5px 5px 0px rgba(55,241,233,.3);
+            background: #fff;
+            border-radius: 10px;
+        }
+
+        @keyframes moveX {
+            0% {
+                right: -545px;
+                opacity: .6;
+            }
+            100% {
+                right: 50px;
+                opacity: 1;
+            }
+        }
+
+        form h4 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        form input {
+            transition: all .3s;
+        }
+
+        form > div {
+            margin: 10px 0px;
+            position: relative
+        }
+
+        form > div > label {
+            float: left;
+            display: block;
+            width: 160px;
+            text-align: right;
+            line-height: 44px;
+            height: 44px;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        form > div > label:after {
+            content: '*';
+            display: block;
+            color: red;
+            position: absolute;
+            right: 9px;
+            top: -2px
+        }
+
+        form > div > label + input {
+            margin-left: 10px;
+            width: 280px;
+            height: 44px;
+            border: 1px solid #cecece;
+            padding: 6px 8px;
+            text-indent: 50px;
+            background: #fff;
+            border-radius: 3px;
+        }
+
+        form > div > label + input:focus {
+            background: #fff;
+            border: 1px solid #f15a50;
+            box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, .3);
+        }
+
+        form > div > i {
+            position: absolute;
+            left: 170px;
+            width: 44px;
+            height: 44px;
+            border-radius: 3px 0px 0px 3px;
+            color: #999;
+            border-right: 1px solid #cecece;
+        }
+
+        form > div > div {
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 5px
+        }
+
+        form > div > div > img {
+            display: block;
+        }
+
+        form > div > input:focus + i {
+            box-shadow: 0px 0px 3px #f15a50 inset;
+            color: rgb(255, 90, 0);
+            border-right: 1px solid #f15a50;
+        }
+
+        form > p {
+            text-align: center;
+            margin: 20px 0px;
+        }
+
+        form > p > input[type="submit"] {
+            width: 90px;
+            height: 44px;
+            background: #f15a50;;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 3px;
+            border: 1px solid rgba(241, 90, 80, .3);
+            box-shadow: 0px 0px 3px #f15a50;
+            cursor: pointer;
+        }
+
+        form > p > input[type="submit"]:active {
+            color: #f15a50;
+            background: #fff;
+            box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, .3);
+        }
+
+        form > div > input[type="button"] {
+            width: 90px;
+            height: 44px;
+            border: 1px solid rgba(241, 90, 80, .3);
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 116px;background: #f5f5f5;"></div>
+<div class="container">
+    <form action="#">
+        <header><h4>用户注册</h4></header>
+        <div><label for="">用户名：</label><input type="text" maxlength="20" size="8" placeholder="请输入用户名" required/><i></i>
+        </div>
+        <div><label for="">用户密码：</label><input type="password" maxlength="20" size="8" required/></div>
+        <div><label for="">确认密码：</label><input type="password" maxlength="20" size="8" required/></div>
+        <div><label for="">手机号码：</label><input type="text" maxlength="20" size="8" pattern="[0-9]{11}" required/></div>
+        <div><label for="">短信验证码：</label><input type="text"/><input type="button" required value="获取验证码"/></div>
+        <div><label for="">图形验证码：</label><input type="text"/>
+            <div><img src="" alt="验证码图片" width="90" height="44"/></div>
+        </div>
+        <p><input type="submit" value="注册"/></p>
+    </form>
+</div>
+</body>
+</html>
