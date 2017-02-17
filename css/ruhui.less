@@ -1,0 +1,94 @@
+@import "base.css";
+@import "veriable";
+@import "sidebar.css";
+.container{
+  .step{
+    width: 100%;
+    padding: 40px 0px 40px 200px;
+    > ul{
+      overflow: hidden;
+      li{
+        float: left;
+        padding:8px 16px;
+        margin: 10px 20px;
+        height:40px;
+        background:@themeColor;
+        color: #fff;
+        font-size: 16px;
+        line-height:24px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid rgba(241, 90, 80, .3);
+        box-shadow: 0px 0px 3px fade(@themeColor, 30%);
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+          background: #C44A40;
+        }
+        &:active{
+          color: #f15a50;
+          background: #fff;
+          box-shadow: 0px 0px 0px 5px fade(@themeColor, 30%);
+        }
+      };
+    }
+    >div{
+      padding:20px;
+      p:last-of-type{
+        text-align: center;
+        input{
+          .button(@width: 90px);
+          margin: 20px;
+        }
+      }
+    }
+    .app-step1{
+      ul:first-of-type{
+        li{
+          margin-bottom: 10px;
+          input[type=radio]{
+            margin-right: 4px;
+          }
+        }
+      }
+      ul:nth-of-type(2){
+        overflow: hidden;
+        padding-left:20px;
+        li{
+          float: left;
+        }
+      }
+
+    }
+    .app-step2{
+      h4{margin-bottom: 20px;background-color: #f5f5f5;text-align: center;}
+    }
+    .app-step3{
+      form{
+        .box-shadow;
+        padding: 20px;
+        >div{
+          padding:3px 6px;
+          span{
+            float: left;
+            width: 120px;
+            height:30px;
+            line-height: 30px;
+            text-align: right;
+            margin-right: 10px;
+          }
+          input,select{
+            width:360px;
+            height:30px;
+            .border(@borderColor1)
+          }
+        }
+      }
+    }
+    .app-step4{
+      p{
+        input:last-child{width: 120px;}
+      }
+    }
+  }
+}

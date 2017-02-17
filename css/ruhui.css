@@ -1,0 +1,134 @@
+@import "base.css";
+@import "sidebar.css";
+.border-bottom {
+  border-bottom: 1px solid #ccc;
+}
+.border-right {
+  border-right: 1px solid #ccc;
+}
+.border-left {
+  border-left: 1px solid #ccc;
+}
+.border-top {
+  border-top: 1px solid #ccc;
+}
+.box-shadow {
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.block {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.posabs {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.posrel {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+.container .step {
+  width: 100%;
+  padding: 40px 0px 40px 200px;
+}
+.container .step > ul {
+  overflow: hidden;
+}
+.container .step > ul li {
+  float: left;
+  padding: 8px 16px;
+  margin: 10px 20px;
+  height: 40px;
+  background: #f15a50;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgba(241, 90, 80, 0.3);
+  box-shadow: 0px 0px 3px rgba(241, 90, 80, 0.3);
+  cursor: pointer;
+  transition: all .3s;
+}
+.container .step > ul li:hover {
+  background: #C44A40;
+}
+.container .step > ul li:active {
+  color: #f15a50;
+  background: #fff;
+  box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, 0.3);
+}
+.container .step > div {
+  padding: 20px;
+}
+.container .step > div p:last-of-type {
+  text-align: center;
+}
+.container .step > div p:last-of-type input {
+  width: 90px;
+  height: 40px;
+  background: #f15a50;
+  color: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgba(241, 90, 80, 0.3);
+  box-shadow: 0px 0px 3px rgba(241, 90, 80, 0.3);
+  cursor: pointer;
+  transition: all .3s;
+  margin: 20px;
+}
+.container .step > div p:last-of-type input:hover {
+  background: #C44A40;
+}
+.container .step > div p:last-of-type input:active {
+  color: #f15a50;
+  background: #fff;
+  box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, 0.3);
+}
+.container .step .app-step1 ul:first-of-type li {
+  margin-bottom: 10px;
+}
+.container .step .app-step1 ul:first-of-type li input[type=radio] {
+  margin-right: 4px;
+}
+.container .step .app-step1 ul:nth-of-type(2) {
+  overflow: hidden;
+  padding-left: 20px;
+}
+.container .step .app-step1 ul:nth-of-type(2) li {
+  float: left;
+}
+.container .step .app-step2 h4 {
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+.container .step .app-step3 form {
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+}
+.container .step .app-step3 form > div {
+  padding: 3px 6px;
+}
+.container .step .app-step3 form > div span {
+  float: left;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
+  margin-right: 10px;
+}
+.container .step .app-step3 form > div input,
+.container .step .app-step3 form > div select {
+  width: 360px;
+  height: 30px;
+  border: 1px solid #ddd;
+}
+.container .step .app-step4 p input:last-child {
+  width: 120px;
+}

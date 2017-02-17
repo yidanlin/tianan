@@ -1,0 +1,46 @@
+@import "base.css";
+@import "veriable";
+.pagination{
+  margin-bottom: 20px;
+  ul{
+    overflow: hidden;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 0px;
+    li{
+      border-radius: 5px;
+      text-align: center;
+      line-height: 36px;
+      height:36px;
+      .border(@borderColor1);
+      float: left;
+      margin-right: 8px;
+      a{
+        border-radius: 5px;
+        padding:0px 5px;
+        color: #666;
+        .block;
+        &:hover{
+          transform: scale(1.1,1.1);
+          .box-shadow;
+          background: @themeColor;
+          color:#fff
+        }
+      }
+    }
+    input,button{
+      width: 36px;height:36px;
+      .border(@borderColor1);
+      border-radius: 5px;
+      text-align: center;
+      color: #666;
+      margin-right: 8px;
+    }
+    button:hover{
+      transform: scale(1.1,1.1);
+      .box-shadow;
+      background: @themeColor;
+      color:#fff
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/sidebar.css">
+</head>
+<body>
+<aside>
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0)">入会管理</a></li>
+            <li><a href="javascript:void(0)">入会申请</a></li>
+            <li><a href="javascript:void(0)">入会修改</a></li>
+            <li><a href="javascript:void(0)">注册进度查询</a></li>
+        </ul>
+        <ul>
+            <li><a href="javascript:void(0)">用户管理</a></li>
+            <li><a href="javascript:void(0)">交易员管理</a></li>
+        </ul>
+    </nav>
+</aside>
+<script src="../js/jquery-3.1.1.js"></script>
+<script>
+    $("aside ul").each(function(index,dom){
+        $(dom).on("click",function(){
+            $(this).toggleClass("active");
+        })
+    })
+</script>
+</body>
+</html>
