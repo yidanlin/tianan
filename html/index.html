@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/slider.css">
+</head>
+<body>
+<div style="width: 100%;height: 116px;background: #f5f5f5"></div>
+<div class="slider">
+    <ul>
+        <li><a href="javascript:void (0)" data-img="url(../img/sl1.png)"></a></li>
+        <li><a href="javascript:void (0)" data-img="url(../img/sl2.jpg)"></a></li>
+        <li><a href="javascript:void (0)" data-img="url(../img/sl3.png)"></a></li>
+    </ul>
+    <ol>
+    </ol>
+</div>
+<script src="../js/jquery-3.1.1.js"></script>
+<script>
+    $.fn.slider = function () {
+        var defaults = {
+            speed:3000
+        };
+        var options = $.extend(defaults,options);
+        var timer = null;
+        var num = 0;
+        var obj = (this),ulList = $("ul li",obj), ol = $("ol",obj);
+        ulList.each(function () {
+            $(this).find("a").css("background-image", $(this).find("a").data("img"));
+        });
+        for (let i = 0; i < ulList.length; i++) {
+            $("<li></li>").appendTo(ol);
+        }
+        clearInterval(timer);
+        timer = setInterval(show, options.speed);
+        function show() {
+            if (num > ulList.length) {
+                num = 0;
+            }
+            ulList.eq(num).fadeIn().siblings().fadeOut();
+            ol.find("li").eq(num).addClass("active").siblings().removeClass("active");
+            num++;
+        }
+
+        obj.hover(function () {
+            clearInterval(timer);
+        }, function () {
+            clearInterval(timer);
+            setInterval(show, options.speed);
+        });
+        ol.on("click", "li", function () {
+            clearInterval(timer);
+            num = $(this).index();
+            ulList.eq(num).fadeIn().siblings().fadeOut();
+            $(this).addClass("active").removeClass("active");
+        })
+    };
+
+    $(".slider").slider();
+
+</script>
+</body>
+</html>
