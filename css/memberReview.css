@@ -87,49 +87,59 @@ textarea:-ms-input-placeholder {
   line-height: 40px;
   text-align: center; }
 
-aside {
-  width: 160px;
-  height: auto;
-  position: absolute;
+.containerMemRv {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
   left: 0;
-  top: 0;
-  top: 40px;
-  border: 1px solid #ddd;
-  border-radius: 5px; }
-  aside nav ul {
+  top: 0; }
+  .containerMemRv > main {
     width: 100%;
-    height: 40px;
-    overflow: hidden;
-    transition: all .3s; }
-    aside nav ul.active {
-      height: auto; }
-      aside nav ul.active li:first-child:before {
-        top: 0px;
-        transform: rotate(90deg); }
-    aside nav ul li {
+    padding: 40px 0px 40px 200px; }
+    .containerMemRv > main .mem-list {
+      background: linear-gradient(45deg, #eeeeee 50%, #2980b9 50%);
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #eeeeee), color-stop(100%, #ddd));
+      background-size: 5px 5px;
+      border: 1px solid #ddd;
+      padding: 20px;
+      overflow: hidden;
+      box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3); }
+    .containerMemRv > main section:first-of-type .mem-list > div {
+      height: auto;
       width: 100%;
-      height: 40px;
-      line-height: 40px;
-      text-align: center;
+      padding-left: 160px;
       position: relative;
       left: 0;
       top: 0; }
-      aside nav ul li:first-child {
-        border-left: 5px solid #F15A50; }
-      aside nav ul li:first-child:before {
-        display: table;
+      .containerMemRv > main section:first-of-type .mem-list > div span {
         position: absolute;
-        right: 10px;
-        top: 2px;
-        font-family: iconfont;
-        content: "\e6a7";
-        transform: rotate(0deg);
-        transition: all .3s; }
-      aside nav ul li:not(:last-child) {
-        border-bottom: 1px solid #eee; }
-      aside nav ul li a {
-        display: block;
+        left: 0;
+        top: 0;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: right; }
+      .containerMemRv > main section:first-of-type .mem-list > div > ul {
         width: 100%;
-        height: 100%; }
+        height: 40px;
+        line-height: 40px;
+        overflow: hidden; }
+        .containerMemRv > main section:first-of-type .mem-list > div > ul li {
+          float: left; }
+          .containerMemRv > main section:first-of-type .mem-list > div > ul li > ul {
+            color: #999999;
+            height: 20px;
+            line-height: 20px; }
+    .containerMemRv > main section:nth-of-type(2) .mem-list > div {
+      height: auto;
+      width: 45%;
+      float: left; }
+      .containerMemRv > main section:nth-of-type(2) .mem-list > div h6 {
+        margin: 5px 0px; }
+    .containerMemRv > main section:nth-of-type(3) .mem-list > div textarea {
+      width: 100%;
+      padding: 10px;
+      line-height: 21px; }
 
-/*# sourceMappingURL=sidebar.css.map */
+/*# sourceMappingURL=memberReview.css.map */

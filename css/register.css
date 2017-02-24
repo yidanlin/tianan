@@ -1,136 +1,223 @@
-body {
-    background: url("../img/regBg.jpg") no-repeat center center;
-}
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; }
 
-form {
+html, body {
+  width: 100%;
+  min-width: 1200px;
+  min-height: 100%; }
+
+body {
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  background: #fff; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, li, ul {
+  list-style: none; }
+
+input[type=search], input[type=txt] {
+  vertical-align: middle; }
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 3px;
+  vertical-align: middle;
+  margin-top: -2px; }
+  input[type="checkbox"] + label, input[type="radio"] + label {
+    margin-right: 10px; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+  a:visited {
+    color: #F15A50; }
+  a:hover {
+    color: #333; }
+  a:active {
+    color: #333; }
+
+header h2 {
+  margin: 20px 0px;
+  padding: 20px 0px; }
+header h3 {
+  margin: 15px 0px;
+  padding: 15px 0px; }
+header h4 {
+  margin: 10px 0px;
+  padding: 10px 0px; }
+header h6 {
+  font-size: 14px;
+  margin: 5px 0px;
+  padding: 5px 0px; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999; }
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999; }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("font/iconfont.eot");
+  src: url("font/iconfont.eot?#iefix") format("embedded-opentype"), url("font/iconfont.woff") format("woff"), url("font/iconfont.ttf") format("truetype"), url("font/iconfont.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center; }
+
+.containerReg {
+  background: url("../img/regBg.jpg") no-repeat center top;
+  padding: 100px 0px; }
+  .containerReg form {
     width: 610px;
-    margin: 100px auto 0px auto;
+    margin: 0px auto;
     /*position: absolute;*/
     /*top:80px;*/
     /*right:50px;*/
     /*animation: moveX 1s;*/
     padding: 30px;
-    box-shadow: 0px 0px 100px 0px #37f1e9, 2px 5px 5px 0px rgba(55,241,233,.3);
+    box-shadow: 0px 0px 100px 0px #37f1e9, 2px 5px 5px 0px rgba(55, 241, 233, 0.3);
     background: #fff;
-    border-radius: 10px;
-}
+    border-radius: 10px; }
+    .containerReg form h4 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: bold; }
+    .containerReg form input {
+      transition: all .3s; }
+    .containerReg form > div {
+      margin: 10px 0px;
+      position: relative; }
+      .containerReg form > div > label {
+        float: left;
+        display: block;
+        width: 160px;
+        text-align: right;
+        line-height: 40px;
+        height: 40px;
+        letter-spacing: 1px;
+        position: relative; }
+        .containerReg form > div > label:before {
+          content: "*";
+          position: absolute;
+          right: 9px;
+          top: -2px;
+          display: table;
+          color: red; }
+        .containerReg form > div > label + input {
+          width: 280px;
+          outline: none;
+          height: 40px;
+          font-size: 16px;
+          line-height: 40px;
+          background: #fff;
+          border-radius: 5px;
+          box-shadow: 0px 0px 3px rgba(241, 90, 80, 0.3);
+          cursor: pointer;
+          vertical-align: middle;
+          transition: all .3s;
+          color: #333;
+          text-align: left;
+          border: 1px solid #ddd;
+          text-indent: 50px; }
+          .containerReg form > div > label + input:focus {
+            color: #333;
+            background: #fff;
+            box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, 0.3);
+            border: 1px solid #F15A50; }
+          .containerReg form > div > label + input:focus + i {
+            box-shadow: 0px 0px 3px #F15A50 inset;
+            color: #F15A50;
+            border-right: 1px solid #F15A50; }
+      .containerReg form > div > input[type="button"] {
+        width: 90px;
+        outline: none;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        background: #F15A50;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px rgba(241, 90, 80, 0.3);
+        cursor: pointer;
+        vertical-align: middle;
+        transition: all .3s;
+        color: #fff;
+        text-align: center;
+        border: 1px solid #F15A50;
+        margin-left: 10px; }
+        .containerReg form > div > input[type="button"]:hover, .containerReg form > div > input[type="button"]:focus {
+          background: #F15A50; }
+        .containerReg form > div > input[type="button"]:active {
+          color: #F15A50;
+          background: #fff;
+          box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, 0.3); }
+      .containerReg form > div > i {
+        position: absolute;
+        left: 160px;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px 0px 0px 3px;
+        color: #999;
+        border-right: 1px solid #eee; }
+      .containerReg form > div > div {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px; }
+        .containerReg form > div > div > img {
+          display: block; }
+    .containerReg form > p {
+      text-align: center;
+      margin: 20px 0px; }
+      .containerReg form > p > input {
+        width: 90px;
+        outline: none;
+        height: 40px;
+        font-size: 16px;
+        line-height: 40px;
+        background: #F15A50;
+        border-radius: 5px;
+        box-shadow: 0px 0px 3px rgba(241, 90, 80, 0.3);
+        cursor: pointer;
+        vertical-align: middle;
+        transition: all .3s;
+        color: #fff;
+        text-align: center;
+        border: 1px solid #F15A50; }
+        .containerReg form > p > input:hover, .containerReg form > p > input:focus {
+          background: #F15A50; }
+        .containerReg form > p > input:active {
+          color: #F15A50;
+          background: #fff;
+          box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, 0.3); }
 
 @keyframes moveX {
-    0% {
-        right: -545px;
-        opacity: .6;
-    }
-    100% {
-        right: 50px;
-        opacity: 1;
-    }
-}
+  0% {
+    right: -545px;
+    opacity: .6; }
+  100% {
+    right: 50px;
+    opacity: 1; } }
 
-form h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-form input {
-    transition: all .3s;
-}
-
-form > div {
-    margin: 10px 0px;
-    position: relative
-}
-
-form > div > label {
-    float: left;
-    display: block;
-    width: 160px;
-    text-align: right;
-    line-height: 40px;
-    height: 40px;
-    position: relative;
-    letter-spacing: 1px;
-}
-
-form > div > label:after {
-    content: '*';
-    display: block;
-    color: red;
-    position: absolute;
-    right: 9px;
-    top: -2px
-}
-
-form > div > label + input {
-    margin-left: 10px;
-    width: 280px;
-    height: 40px;
-    border: 1px solid #cecece;
-    padding: 6px 8px;
-    text-indent: 50px;
-    background: #fff;
-    border-radius: 3px;
-}
-
-form > div > label + input:focus {
-    background: #fff;
-    border: 1px solid #f15a50;
-    box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, .3);
-}
-
-form > div > i {
-    position: absolute;
-    left: 170px;
-    width: 40px;
-    height: 40px;
-    border-radius: 3px 0px 0px 3px;
-    color: #999;
-    border-right: 1px solid #cecece;
-}
-
-form > div > div {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 5px
-}
-
-form > div > div > img {
-    display: block;
-}
-
-form > div > input:focus + i {
-    box-shadow: 0px 0px 3px #f15a50 inset;
-    color: rgb(255, 90, 0);
-    border-right: 1px solid #f15a50;
-}
-
-form > p {
-    text-align: center;
-    margin: 20px 0px;
-}
-
-form > p > input[type="submit"] {
-    width: 90px;
-    height: 40px;
-    background: #f15a50;;
-    color: #fff;
-    font-size: 16px;
-    border-radius: 3px;
-    border: 1px solid rgba(241, 90, 80, .3);
-    box-shadow: 0px 0px 3px #f15a50;
-    cursor: pointer;
-}
-
-form > p > input[type="submit"]:active {
-    color: #f15a50;
-    background: #fff;
-    box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, .3);
-}
-
-form > div > input[type="button"] {
-    width: 90px;
-    height: 40px;
-    border: 1px solid rgba(241, 90, 80, .3);
-    cursor: pointer;
-    margin-left: 10px;
-}
+/*# sourceMappingURL=register.css.map */

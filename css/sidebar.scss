@@ -1,0 +1,50 @@
+@import "reset";
+aside {
+  width: 160px;
+  height:auto;
+  @include posabs;
+  top:40px;
+  @include border(all,nth($borderColor,1));
+  border-radius: 5px;
+  nav{
+    ul{
+      width: 100%;
+      height:40px;
+      overflow: hidden;
+      transition:all .3s;
+      &.active{
+        height:auto;
+        li:first-child:before{
+          top:0px;
+          transform: rotate(90deg);
+        }
+      }
+      li{
+        width: 100%;
+        height:40px;
+        line-height: 40px;
+        text-align: center;
+        @include posrel;
+        &:first-child{
+          border-left:5px solid $themeColor;
+        }
+        &:first-child:before{
+          display: table;
+          position: absolute;
+          right: 10px;
+          top:2px;
+          font-family: iconfont;
+          content: "\e6a7";
+          transform: rotate(0deg);
+          transition: all .3s;
+        }
+        &:not(:last-child){
+         @include border(bottom,nth($borderColor,2));
+        }
+        a{
+          @include block;
+        }
+      }
+    }
+  }
+}

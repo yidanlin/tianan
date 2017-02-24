@@ -1,0 +1,91 @@
+@import "reset";
+body {
+
+}
+
+.containerReg{
+  background: url("../img/regBg.jpg") no-repeat center top;
+  padding:100px 0px;
+  form {
+    width: 610px;
+    margin: 0px auto;
+    /*position: absolute;*/
+    /*top:80px;*/
+    /*right:50px;*/
+    /*animation: moveX 1s;*/
+    padding: 30px;
+    box-shadow: 0px 0px 100px 0px #37f1e9, 2px 5px 5px 0px rgba(55,241,233,.3);
+    background: #fff;
+    border-radius: 10px;
+    h4 {
+      font-size: 18px;
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    input {
+      transition: all .3s;
+    }
+    > div {
+      margin: 10px 0px;
+      position: relative;
+      > label {
+        float: left;
+        display: block;
+        width: 160px;
+        text-align: right;
+        line-height: 40px;
+        height: 40px;
+        letter-spacing: 1px;
+        @include warn;
+        + input{
+          @include input(txt,280px,#fff);
+          text-indent: 50px;
+          &:focus + i {
+            box-shadow: 0px 0px 3px $themeColor inset;
+            color: $themeColor;
+            @include border(right,$themeColor);
+          }
+        }
+      }
+      > input[type="button"] {
+        @include input(button,90px,$themeColor);
+        margin-left: 10px;
+      }
+      > i {
+        position: absolute;
+        left: 160px;
+        width: 40px;
+        height: 40px;
+        border-radius: 3px 0px 0px 3px;
+        color: #999;
+        @include border(right,nth($borderColor,2));
+      }
+      > div {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+        > img {
+          display: block;
+        }
+      }
+    }
+    > p {
+      text-align: center;
+      margin: 20px 0px;
+      > input {
+        @include input(button,90px,$themeColor);
+      }
+    }
+  }
+}
+
+@keyframes moveX {
+  0% {
+    right: -545px;
+    opacity: .6;
+  }
+  100% {
+    right: 50px;
+    opacity: 1;
+  }
+}

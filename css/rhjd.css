@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%; }
+
+html, body {
+  width: 100%;
+  min-width: 1200px;
+  min-height: 100%; }
+
+body {
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  background: #fff; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, li, ul {
+  list-style: none; }
+
+input[type=search], input[type=txt] {
+  vertical-align: middle; }
+
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 3px;
+  vertical-align: middle;
+  margin-top: -2px; }
+  input[type="checkbox"] + label, input[type="radio"] + label {
+    margin-right: 10px; }
+
+a {
+  color: #333;
+  text-decoration: none; }
+  a:visited {
+    color: #F15A50; }
+  a:hover {
+    color: #333; }
+  a:active {
+    color: #333; }
+
+header h2 {
+  margin: 20px 0px;
+  padding: 20px 0px; }
+header h3 {
+  margin: 15px 0px;
+  padding: 15px 0px; }
+header h4 {
+  margin: 10px 0px;
+  padding: 10px 0px; }
+header h6 {
+  font-size: 14px;
+  margin: 5px 0px;
+  padding: 5px 0px; }
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #999; }
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #999; }
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #999; }
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #999; }
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("font/iconfont.eot");
+  src: url("font/iconfont.eot?#iefix") format("embedded-opentype"), url("font/iconfont.woff") format("woff"), url("font/iconfont.ttf") format("truetype"), url("font/iconfont.svg#iconfont") format("svg"); }
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center; }
+
+.containerRhsq {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  position: relative;
+  left: 0;
+  top: 0; }
+  .containerRhsq .step {
+    width: 100%;
+    padding: 40px 0px 40px 200px; }
+    .containerRhsq .step > ul {
+      overflow: hidden; }
+      .containerRhsq .step > ul li {
+        float: left;
+        padding: 8px 16px;
+        margin: 10px 20px;
+        height: 40px;
+        background: #F15A50;
+        color: #fff;
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+        border-radius: 5px;
+        border: 1px solid rgba(241, 90, 80, 0.3);
+        box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        transition: all .3s; }
+        .containerRhsq .step > ul li:hover {
+          background: #C44A40; }
+        .containerRhsq .step > ul li:active {
+          color: #f15a50;
+          background: #fff;
+          box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3); }
+    .containerRhsq .step > div {
+      padding: 20px; }
+      .containerRhsq .step > div p:last-of-type {
+        text-align: center; }
+        .containerRhsq .step > div p:last-of-type input {
+          width: 90px;
+          outline: none;
+          height: 40px;
+          font-size: 16px;
+          line-height: 40px;
+          background: #F15A50;
+          border-radius: 5px;
+          box-shadow: 0px 0px 3px rgba(241, 90, 80, 0.3);
+          cursor: pointer;
+          vertical-align: middle;
+          transition: all .3s;
+          color: #fff;
+          text-align: center;
+          border: 1px solid #F15A50;
+          margin: 20px; }
+          .containerRhsq .step > div p:last-of-type input:hover, .containerRhsq .step > div p:last-of-type input:focus {
+            background: #F15A50; }
+          .containerRhsq .step > div p:last-of-type input:active {
+            color: #F15A50;
+            background: #fff;
+            box-shadow: 0px 0px 0px 5px rgba(241, 90, 80, 0.3); }
+    .containerRhsq .step .app-step1 > p {
+      margin-bottom: 10px; }
+    .containerRhsq .step .app-step1 > ul > li:not(:last-of-type) {
+      margin-bottom: 10px; }
+      .containerRhsq .step .app-step1 > ul > li:not(:last-of-type) input[type=radio] {
+        margin-right: 4px; }
+    .containerRhsq .step .app-step1 > ul > li:last-child > ul {
+      overflow: hidden;
+      padding-left: 20px; }
+      .containerRhsq .step .app-step1 > ul > li:last-child > ul > li {
+        float: left;
+        color: gray;
+        margin-right: 10px; }
+        .containerRhsq .step .app-step1 > ul > li:last-child > ul > li input {
+          margin-right: 4px; }
+    .containerRhsq .step .app-step1 > ul > li:last-child > input:checked ~ ul > li {
+      color: #333; }
+    .containerRhsq .step .app-step2 h4 {
+      margin-bottom: 20px;
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 6px; }
+    .containerRhsq .step .app-step3 > p {
+      color: gray; }
+    .containerRhsq .step .app-step3 form {
+      box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+      padding: 20px; }
+      .containerRhsq .step .app-step3 form > div {
+        padding: 3px 6px; }
+        .containerRhsq .step .app-step3 form > div span {
+          float: left;
+          width: 120px;
+          height: 30px;
+          line-height: 30px;
+          text-align: right;
+          margin-right: 10px; }
+        .containerRhsq .step .app-step3 form > div input, .containerRhsq .step .app-step3 form > div select {
+          width: 360px;
+          height: 30px;
+          border: 1px solid #eee; }
+    .containerRhsq .step .app-step4 p input:last-child {
+      width: 120px; }
+    .containerRhsq .step .app-step4 section {
+      overflow: hidden;
+      padding: 40px;
+      border: 1px solid #ddd; }
+      .containerRhsq .step .app-step4 section > div {
+        float: left;
+        width: 150px;
+        height: 150px;
+        background: #f5f5f5;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        position: relative;
+        left: 0;
+        top: 0;
+        border: 1px dashed #333333; }
+        .containerRhsq .step .app-step4 section > div:not(:nth-child(3n)) {
+          margin-right: 120px; }
+        .containerRhsq .step .app-step4 section > div:nth-child(3n+1) {
+          margin-left: 120px; }
+        .containerRhsq .step .app-step4 section > div:before {
+          content: "\e71d";
+          display: table;
+          position: absolute;
+          font-family: iconfont;
+          font-size: 60px;
+          top: 20%;
+          width: 100%;
+          text-align: center; }
+        .containerRhsq .step .app-step4 section > div .fangda {
+          position: absolute;
+          font-family: iconfont;
+          font-size: 20px;
+          top: 5%;
+          right: 5%;
+          transform: scale(1, 1);
+          transition: all .3s;
+          z-index: 2;
+          cursor: pointer;
+          color: #F15A50; }
+          .containerRhsq .step .app-step4 section > div .fangda:hover {
+            transform: scale(1.2, 1.2); }
+        .containerRhsq .step .app-step4 section > div span {
+          font-size: 12px;
+          text-align: center;
+          display: block;
+          width: 100%;
+          height: 30px; }
+        .containerRhsq .step .app-step4 section > div p {
+          position: relative;
+          left: 0;
+          top: 0;
+          line-height: 21px;
+          margin-top: 10px; }
+          .containerRhsq .step .app-step4 section > div p:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "*";
+            color: red; }
+        .containerRhsq .step .app-step4 section > div input[type="file"] {
+          width: 100%;
+          margin-top: 30%;
+          height: 70px;
+          opacity: 0;
+          overflow: hidden;
+          cursor: pointer; }
+
+/*# sourceMappingURL=rhjd.css.map */

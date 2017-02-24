@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员信息一览表</title>
+    <link rel="stylesheet" href="../../css/memberReview.css">
+    <link rel="stylesheet" href="../../css/head.css">
+    <link rel="stylesheet" href="../../css/sidebar.css">
+</head>
+<body>
+<div class="top">
+    <header>
+        <div class="container1">
+            <ul>
+                <li><a href="javascript:void(0)"><i></i>天安金交所首页</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript:void(0)">登录</a></li>
+                <li><a href="javascript:void(0)">|</a></li>
+                <li><a href="javascript:void(0)">注册</a></li>
+            </ul>
+            <ul>
+                <li>欢迎您，<a href="javascript:void(0)">登录</a></li>
+                <li><a href="javascript:void(0)">|</a></li>
+                <li><a href="javascript:void(0)">退出</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="navigation">
+        <div class="container1">
+            <a href="javascript:void(0)">天安金交所</a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">首页<br>
+                            <small>Home</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">产品专区<br>
+                            <small>Product</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">期次产品</a></li>
+                            <li><a href="javascript:void(0)">活期产品</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">业务专区<br>
+                            <small>Business</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">票据业务</a></li>
+                            <li><a href="javascript:void(0)">B2B业务</a></li>
+                            <li><a href="javascript:void(0)">跨境业务</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">公告专区<br>
+                            <small>Notice</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">挂牌公告</a></li>
+                            <li><a href="javascript:void(0)">摘牌公告</a></li>
+                            <li><a href="javascript:void(0)">发行公告</a></li>
+                            <li><a href="javascript:void(0)">成立公告</a></li>
+                            <li><a href="javascript:void(0)">其它公告</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">新闻中心<br>
+                            <small>News</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">天交所新闻</a></li>
+                            <li><a href="javascript:void(0)">天交所公告</a></li>
+                            <li><a href="javascript:void(0)">天交所视角</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">会员服务<br>
+                            <small>Member</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">会员特权</a></li>
+                            <li><a href="javascript:void(0)">入会指引</a></li>
+                            <li><a href="javascript:void(0)">会员制度</a></li>
+                            <li><a href="javascript:void(0)">相关下载</a></li>
+                            <li><a href="javascript:void(0)">会员list</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">关于天交所<br>
+                            <small>About</small>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-3.1.1.js"></script>
+<script>
+    $(".navigation > .container1 > nav > ul > li").hover(function(){$(this).addClass("active").end().find("ul").fadeIn()},function(){$(this).removeClass("active").end().find("ul").fadeOut()})
+</script>
+<div class="containerMemRv">
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)">入会管理</a></li>
+                <li><a href="javascript:void(0)">入会申请</a></li>
+                <li><a href="javascript:void(0)">入会修改</a></li>
+                <li><a href="javascript:void(0)">入会进度查询</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript:void(0)">会员管理</a></li>
+                <li><a href="javascript:void(0)">会员管理</a></li>
+                <li><a href="javascript:void(0)">会员信息一览</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript:void(0)">关于天交所</a></li>
+                <li><a href="javascript:void(0)">关于天交所</a></li>
+                <li><a href="javascript:void(0)">联系我们</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <script>
+        $("aside ul").each(function(index,dom){
+            $(dom).on("click",function(){
+                $(this).toggleClass("active");
+            })
+        })
+    </script>
+    <main>
+        <section>
+            <header><h4>会员信息一览表</h4></header>
+            <div class="mem-list">
+                <div>
+                    <span>会员编号：</span>
+                    <ul><li>84230000789</li></ul>
+                </div>
+                <div>
+                    <span>会员种类：</span>
+                    <ul>
+                        <li><input type="radio" name="zl" id="jn"><label for="jn">境内会员</label></li>
+                        <li><input type="radio" name="zl" id="jw"><label for="jw">境外会员</label></li>
+                    </ul>
+                </div>
+                <div>
+                    <span>交易种类：</span>
+                    <ul><li><input type="radio" name="zl" id="jy"><label for="jy">交易类</label></li>
+                        <li><input type="radio" name="zl" id="jj"><label for="jj">经济类</label></li>
+                        <li><input type="radio" name="zl" id="cx"><label for="cx">承销类</label></li>
+                        <li><input type="radio" name="zl" id="fw"><label for="fw">服务类</label></li>
+                        <li>
+                            <input type="radio" name="zl" id="zh"><label for="zh">综合类</label>
+                            <ul>
+                                <li><input type="checkbox" id="1"/><label for="1">金融资产转让，受让</label></li>
+                                <li><input type="checkbox" id="2"/><label for="2">受托经纪</label></li>
+                                <li><input type="checkbox" id="3"/><label for="3">金融资产承销</label></li>
+                                <li><input type="checkbox" id="4"/><label for="4">专业服务</label></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <span>机构名称：</span>
+                    <ul>
+                        <li>天安（贵州省）互联网金融资产交易中心股份有限公司</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>币种：</span>
+                    <ul>
+                        <li>人民币</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>注册资金（万）：</span>
+                    <ul>
+                        <li>10,000.00（壹亿圆整）</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>机构性质：</span>
+                    <ul>
+                        <li>股份有限公司</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>所属行业：</span>
+                    <ul>
+                        <li>互联网金融</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>已开通权限：</span>
+                    <ul>
+                        <li><input type="checkbox" id="5"/><label for="5">展示</label></li>
+                        <li><input type="checkbox" id="6"/><label for="6">创设</label></li>
+                        <li><input type="checkbox" id="7"/><label for="7">投资</label></li>
+                    </ul>
+                </div>
+                <div>
+                    <span>机构证件类型：</span>
+                    <ul>
+                        <li>统一社会信用代码证</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>机构证件号码：</span>
+                    <ul>
+                        <li>91520308987MA96JDF82QET</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>机构联系地址：</span>
+                    <ul>
+                        <li>上海市浦东南路999号新梅大厦B座36F</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>法人代表姓名：</span>
+                    <ul>
+                        <li>王浩</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>法人证件类型：</span>
+                    <ul>
+                        <li>身份证</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>法人证件号码：</span>
+                    <ul>
+                        <li>1101081087011873133</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>授权代理人姓名：</span>
+                    <ul>
+                        <li>李铭华</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>授权代理人电话：</span>
+                    <ul>
+                        <li>13816329918</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>授权代理人邮箱：</span>
+                    <ul>
+                        <li>liminghua@tianjs.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>授权代理人证件类型：</span>
+                    <ul>
+                        <li>身份证</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>授权代理人证件号码：</span>
+                    <ul>
+                        <li>310109198507292011</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section>
+            <header><h4>联系人</h4></header>
+            <div class="mem-list">
+               <div>
+                   <header><h6>第一联系人</h6></header>
+                   <div>
+                       <span>姓名：</span>李铭华
+                   </div>
+                   <div>
+                       <span>电话：</span>13863259876
+                   </div>
+                   <div>
+                       <span>邮箱：</span>liminghua@tianjs.com
+                   </div>
+               </div>
+                <div>
+                    <header><h6>第二联系人</h6></header>
+                    <div>
+                        <span>姓名：</span>李铭华
+                    </div>
+                    <div>
+                        <span>电话：</span>13863259876
+                    </div>
+                    <div>
+                        <span>邮箱：</span>liminghua@tianjs.com
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <header><h4>公司介绍</h4></header>
+            <div>
+                <textarea name="" id="" cols="140" rows="10"></textarea>
+            </div>
+        </section>
+        <section>
+            <header><h4>上传资料清单</h4></header>
+            <div class="mem-list">
+                <ul>
+                    <li>资料清单1</li>
+                    <li>资料清单1</li>
+                    <li>资料清单1</li>
+                    <li>资料清单1</li>
+                    <li>资料清单1</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+</body>
+</html>

@@ -1,0 +1,272 @@
+@import 'variable';
+
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+@mixin clears{
+  &:after
+  {
+    content:'';
+    clear:both;
+    display:block;
+    height:0px;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+html,body{
+  width: 100%;
+  min-width: 1200px;
+  min-height: 100%;
+}
+body {
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+  background: #fff;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+ol, li, ul {
+  list-style: none
+}
+input[type=search],input[type=txt]{
+  vertical-align: middle;
+}
+input[type="checkbox"],input[type="radio"]{
+  margin-right: 3px;
+  vertical-align: middle;
+  margin-top: -2px;
+  +label{
+    margin-right:10px;
+  }
+}
+a {
+  color: $baseColor;
+  text-decoration: none;
+  &:visited {
+    color: $themeColor;
+  }
+  &:hover {
+    color: $baseColor;
+  }
+  &:active {
+    color: $baseColor;
+  }
+}
+header{
+  h2{
+    margin: 20px 0px;
+    padding:20px 0px;
+  }
+  h3{
+    margin: 15px 0px;
+    padding:15px 0px;
+  }
+  h4{
+    margin: 10px 0px;
+    padding: 10px 0px;
+  }
+  h6{
+    font-size: 14px;
+    margin: 5px 0px;
+    padding: 5px 0px;
+  }
+}
+//placeholder
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: $lightColor;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: $lightColor;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: $lightColor;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: $lightColor;
+}
+
+@mixin table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  @include border(bottom,nth($borderColor,1));
+  @include border(left,nth($borderColor,1));
+  caption {
+    font-size: 16px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid $themeColor;
+    text-align: left;
+  }
+  thead {
+    background: #f7f7f7;
+  }
+  td {
+    text-align: center;
+    @include border(right,nth($borderColor,1));
+    @include border(top,nth($borderColor,1));
+  }
+}
+
+//font
+@font-face {
+  font-family: 'iconfont';
+  src: url('font/iconfont.eot');
+  src: url('font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('font/iconfont.woff') format('woff'),
+  url('font/iconfont.ttf') format('truetype'),
+  url('font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+}
+
+@mixin block {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin container($padding...) {
+  width: 1200px;
+  margin: 0 auto;
+  padding:$padding;
+}
+@mixin posabs {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@mixin posrel {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+@mixin warn {
+  position: relative;
+  &:before {
+    content: "*";
+    position: absolute;
+    right: 9px;
+    top: -2px;
+    display: table;
+    color: $warnColor;
+  }
+}
+@mixin boxShadow{
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+@mixin blur($num) {
+  -webkit-filter: blur($num);
+  -moz-filter: blur($num);
+  -o-filter: blur($num);
+  -ms-filter: blur($num);
+  filter: blur($num);
+}
+
+@mixin arrow($direction,$size,$color) {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  border-width: $size;
+  cursor: pointer;
+  @if $direction == top {
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent $color transparent;
+    border-top: none;
+  } @else if $direction == bottom {
+    border-style: solid dashed dashed dashed;
+    border-color: $color transparent transparent transparent;
+    border-bottom: none;
+  } @else if $direction == right {
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent $color;
+    border-right: none;
+  } @else if $direction == left {
+    border-style: dashed solid dashed dashed;
+    border-color: transparent $color transparent transparent;
+    border-left: none;
+  }
+}
+
+@mixin border($direction,$color) {
+  @if $direction == top {
+    border-top: 1px solid $color;
+  } @else if $direction == right {
+    border-right: 1px solid $color;
+  } @else if $direction == left {
+    border-left: 1px solid $color;
+  } @else if $direction == bottom {
+    border-bottom: 1px solid $color;
+  } @else if $direction == all {
+    border: 1px solid $color;
+  }
+}
+
+@mixin input($type,$width,$background) {
+  width: $width;
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  background: $background;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px rgba($themeColor, .3);
+  cursor: pointer;
+  vertical-align: middle;
+  transition: all .3s;
+  @if $type == button {
+    color: #fff;
+    text-align: center;
+    border: 1px solid $themeColor;
+    &:hover, &:focus {
+      background: $background;
+    }
+    &:active {
+      color: $themeColor;
+      background: #fff;
+      box-shadow: 0px 0px 0px 5px rgba($themeColor, .3);
+    }
+  } @else {
+    color: $baseColor;
+    text-align: left;
+    border: 1px solid nth($borderColor,1);
+    &:focus{
+      color: $baseColor;
+      background: #fff;
+      box-shadow: 0px 0px 0px 5px rgba($themeColor, .3);
+      border: 1px solid $themeColor;
+    }
+  }
+}
+@mixin bgImg{
+  background: linear-gradient(45deg,#eeeeee 50%,#2980b9 50%);
+  background:-webkit-gradient(linear, left top, right bottom, color-stop(0%,#eeeeee), color-stop(100%,#ddd));
+  background-size: 5px 5px;
+}

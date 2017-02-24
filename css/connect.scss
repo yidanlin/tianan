@@ -1,0 +1,38 @@
+@import "reset";
+.containerConnect{
+  @include container(40px 10px 10px 200px);
+  @include posrel;
+  article{
+    h3{color: $themeColor;@include border(bottom,nth($borderColor,1))}
+    section{
+      padding:20px 0px;
+      border-bottom: 1px dashed nth($borderColor,1);
+      h4{
+        @include posrel;
+        color: $baseColor;
+        padding-left:40px;
+        &:before{
+          content: '\e756';
+          display: block;
+          position: absolute;
+          font-family: iconfont;
+          left:0;
+          top:50%;
+          margin-top:-12px;
+          font-size: 16px;
+          color:#fff;
+          width: 24px;
+          height:24px;
+          line-height: 24px;
+          text-align: center;
+          background: $themeColor;
+          border-radius: 50%;
+        }
+      }
+      p{
+        color: lighten($baseColor,30%);
+        text-indent: 10px;
+      }
+    }
+  }
+}

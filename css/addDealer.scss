@@ -1,0 +1,78 @@
+@import "reset";
+.containerAddDealer {
+  @include container(40px 10px 10px 200px);
+  @include posrel;
+  .addDealer {
+    table{
+      @include table;
+      td {
+        &:nth-child(even){
+          padding: 5px;
+        }
+      }
+    }
+    >div{
+      padding: 40px;
+      @include boxShadow;
+      &:not(:last-of-type){
+        margin-bottom:20px;
+      }
+    }
+    .addAction{
+      &:before{
+        content: "\e6c0";
+        display: table;
+        position: absolute;
+        font-family: iconfont;
+        font-size: 60px;
+        right:-10px;
+        top:0px;
+        transform: rotate(-10deg);
+        text-shadow: 1px 1px 5px  #999,1px 3px 7px  #eee;
+        color: #dddddd;
+      }
+      table {
+        td {
+          &:nth-child(even){
+            width: 240px;
+          }
+          &:nth-child(odd){
+            width: 150px;
+            text-align: right;
+            position: relative;
+            &:before {
+              content: "*";
+              position: absolute;
+              right: 9px;
+              top: 3px;
+              display: table;
+              color: $warnColor;
+            }
+          }
+        }
+        input {
+          @include input (txt,240px,#fff);
+          text-indent: 10px;
+        }
+      }
+      p {
+        text-align: left;
+        margin: 20px 0px;
+        button {
+          @include input (button,90px,$themeColor);
+        }
+      }
+    }
+    .addList{
+      width:100%;
+      table {
+        td {
+          width: 15%;
+          &:nth-child(6n+1) {
+            width: 5%;
+          }
+        }
+      }
+    }
+  }
+}

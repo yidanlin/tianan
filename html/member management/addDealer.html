@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/addDealer.css">
+    <link rel="stylesheet" href="../../css/head.css">
+</head>
+<body>
+<div class="top">
+    <header>
+        <div class="container1">
+            <ul>
+                <li><a href="javascript:void(0)"><i></i>天安金交所首页</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript:void(0)">登录</a></li>
+                <li><a href="javascript:void(0)">|</a></li>
+                <li><a href="javascript:void(0)">注册</a></li>
+            </ul>
+            <ul>
+                <li>欢迎您，<a href="javascript:void(0)">登录</a></li>
+                <li><a href="javascript:void(0)">|</a></li>
+                <li><a href="javascript:void(0)">退出</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="navigation">
+        <div class="container1">
+            <a href="javascript:void(0)">天安金交所</a>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">首页<br>
+                            <small>Home</small>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">产品专区<br>
+                            <small>Product</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">期次产品</a></li>
+                            <li><a href="javascript:void(0)">活期产品</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">业务专区<br>
+                            <small>Business</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">票据业务</a></li>
+                            <li><a href="javascript:void(0)">B2B业务</a></li>
+                            <li><a href="javascript:void(0)">跨境业务</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">公告专区<br>
+                            <small>Notice</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">挂牌公告</a></li>
+                            <li><a href="javascript:void(0)">摘牌公告</a></li>
+                            <li><a href="javascript:void(0)">发行公告</a></li>
+                            <li><a href="javascript:void(0)">成立公告</a></li>
+                            <li><a href="javascript:void(0)">其它公告</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">新闻中心<br>
+                            <small>News</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">天交所新闻</a></li>
+                            <li><a href="javascript:void(0)">天交所公告</a></li>
+                            <li><a href="javascript:void(0)">天交所视角</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">会员服务<br>
+                            <small>Member</small>
+                        </a>
+                        <ul>
+                            <li><a href="javascript:void(0)">会员特权</a></li>
+                            <li><a href="javascript:void(0)">入会指引</a></li>
+                            <li><a href="javascript:void(0)">会员制度</a></li>
+                            <li><a href="javascript:void(0)">相关下载</a></li>
+                            <li><a href="javascript:void(0)">会员list</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">关于天交所<br>
+                            <small>About</small>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-3.1.1.js"></script>
+<script>
+    $(".navigation > .container1 > nav > ul > li").hover(function(){$(this).addClass("active").end().find("ul").fadeIn()},function(){$(this).removeClass("active").end().find("ul").fadeOut()})
+</script>
+<div class="containerAddDealer">
+    <div class="addDealer">
+        <div class="addAction">
+            <table>
+                <caption>添加交易员：</caption>
+                <tbody>
+                <tr>
+                    <td>交易用户名：</td>
+                    <td><input type="text"/></td>
+
+                </tr>
+                <tr>
+                    <td>交易员姓名：</td>
+                    <td><input type="text"/></td>
+
+                </tr>
+                <tr>
+                    <td>会员类型：</td>
+                    <td><input type="text"/></td>
+
+                </tr>
+                <tr>
+                    <td>交易密码：</td>
+                    <td><input type="text"/></td>
+
+                </tr>
+                <tr>
+                    <td>所属部门：</td>
+                    <td><input type="text"/></td>
+
+                </tr>
+                <tr>
+                    <td>手机联系方式：</td>
+                    <td><input type="text"/></td>
+
+                </tr>
+                </tbody>
+            </table>
+            <p>
+                <button>添加</button>
+            </p>
+        </div>
+        <div class="addList">
+            <table>
+                <caption>交易员列表</caption>
+                <thead>
+                <tr>
+                    <td>编号</td>
+                    <td>交易用户名</td>
+                    <td>交易员姓名</td>
+                    <td>所属部门</td>
+                    <td>交易状态</td>
+                    <td>修改状态</td>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>liujiaojiao</td>
+                    <td>刘娇娇</td>
+                    <td>交易部</td>
+                    <td>正常</td>
+                    <td><a href="javascript:void(0)">正常</a><a href="javascript:void(0)">关闭</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="../../js/jquery-3.1.1.js"></script>
+<script>
+    $("aside ul").each(function(index,dom){
+        $(dom).on("click",function(){
+            $(this).toggleClass("active");
+        })
+    })
+</script>
+</body>
+</html>

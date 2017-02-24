@@ -1,0 +1,45 @@
+@import "reset";
+.containerOrderPro {
+  @include container(40px 10px 10px 200px);
+  @include posrel;
+  article{
+    @include border(all,nth($borderColor,1));
+    @include boxShadow;
+    padding: 20px;
+    h4{text-align:center;font-size: 16px;}
+    section{
+      @include bgImg;
+      @include border(all,nth($borderColor,1));
+      padding:20px;
+      margin: 20px;
+      ul{
+        overflow: hidden;
+        li{
+          color: #27bfb9;
+          margin: 10px;
+          line-height: 40px;
+          padding-left:180px;
+          @include posrel;
+          span{
+            @include posabs;
+            text-align: right;
+            width: 170px;
+            color: $baseColor;
+          }
+        }
+      }
+      p{
+        text-align: center;
+        margin: 20px 0px;
+        button{
+          @include input(button,90px,$themeColor);
+        }
+      }
+    }
+    input,select{
+      @include input(txt,240px,#fff);
+      text-indent: 10px;
+
+    }
+  }
+}

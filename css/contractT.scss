@@ -1,0 +1,32 @@
+@import "reset";
+.containerContractT{
+  @include container(40px 10px 10px 200px);
+  @include posrel;
+  form{
+    padding: 20px;
+    @include boxShadow;
+    >div{
+      @include posrel;
+      padding-left: 160px;
+      margin-bottom: 10px;
+      span{
+        @include posabs;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: right;
+      }
+      input{
+        @include input(txt,240px,#fff);
+        text-indent:10px;
+      }
+    }
+    p{
+      text-align: center;
+      input{
+        @include input(button,120px,$themeColor);
+        margin: 20px 0px;
+      }
+    }
+  }
+}

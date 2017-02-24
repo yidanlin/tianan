@@ -1,0 +1,35 @@
+@import "reset";
+.containerRhjdcx{
+  @include container(0px);
+  @include posrel;
+  .acountSt {
+    width: 100%;
+    padding: 40px 0px 40px 200px;
+    > table {
+      text-align: center;
+      @include border(left,nth($borderColor,1));
+      @include border(top,nth($borderColor,1));
+      border-collapse: collapse;
+      width: 920px;
+      > caption {
+        text-align: left;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      thead {
+        font-weight: bold;
+        line-height: 2;
+        background: #f5f5f5;
+      }
+      td {
+        @include border(right,nth($borderColor,1));
+        @include border(bottom,nth($borderColor,1));
+        padding: 5px;
+        width: 25%;
+        button{
+          @include input(button,90px,$themeColor)
+        }
+      }
+    }
+  }
+}
