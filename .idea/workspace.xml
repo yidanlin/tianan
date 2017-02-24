@@ -322,7 +322,7 @@
       <workItem from="1487423162456" duration="37000" />
       <workItem from="1487486578196" duration="24000" />
       <workItem from="1487560355857" duration="8921000" />
-      <workItem from="1487927775552" duration="40000" />
+      <workItem from="1487927775552" duration="152000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1487140443101</created>
@@ -380,11 +380,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487927806773</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="index">
+      <created>1487927886888</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1487927886888</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71581000" />
+    <option name="totallyTimeSpent" value="71693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -443,7 +450,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="注册/登录/入会静态页" />
     <MESSAGE value="less重绘;production;" />
-    <option name="LAST_COMMIT_MESSAGE" value="less重绘;production;" />
+    <MESSAGE value="index" />
+    <option name="LAST_COMMIT_MESSAGE" value="index" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
